@@ -97,3 +97,7 @@ While the server is running you can access the generated pages like this:
 - http://localhost:9090/page/emotion-obj
 - http://localhost:9090/page/emotion-css
 
+## Other Considerations 
+
+Surprisingly, I was unable to find any official guidance on measuring performance for React components. The React docs mention a few optimization techniques, and touch on using in browser profiling tools, but do not offer any suggestions on how to time things when doing automated measurements. I looked at a number of other benchmarks, as well as the benchmarks in the official React repo and took my best guess.
+
