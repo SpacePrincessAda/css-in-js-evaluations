@@ -1,0 +1,34 @@
+.group {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 5px;
+
+  border: 1px solid #eee;
+  background-color: #fff;
+}
+
+.group__selected {
+  background-color: #ded;
+}
+
+.group + .group {
+  margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+  .group {
+    flex-direction: column;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .group-left {
+    margin-bottom: 5px;
+  }
+
+  .group + .group {
+    margin-bottom: 5px;
+  }
+}
+
