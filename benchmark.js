@@ -106,7 +106,7 @@ async function main() {
   });
   console.log('');
 
-  console.log('BUNDLE SIZES: (includes styles and framework, excludes React)')
+  console.log('BUNDLE SIZES: (includes components, styles, and framework; excludes React)');
   const sizes = tests.map(n => [n, getBundleSize(n)]);
   sizes.sort((a, b) => a[1] - b[1]);
   sizes.forEach(([name, size]) => {

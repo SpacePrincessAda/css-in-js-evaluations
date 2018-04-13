@@ -29,36 +29,36 @@ These results were obtained on a 2015 MacBook Pro, 2.7 GHz i5, 16 GB RAM.
 
 ```
 RESULTS: (sorted by mount time, average of 10 runs)
-cxs
-  mount:          23.05 ms
-  re-render:      18.60 ms
 emotion-css
-  mount:          23.38 ms
-  re-render:      17.84 ms
+  mount:          22.83 ms
+  re-render:      19.23 ms
+cxs
+  mount:          23.71 ms
+  re-render:      19.21 ms
 css
-  mount:          23.52 ms
-  re-render:      18.02 ms
+  mount:          26.50 ms
+  re-render:      19.50 ms
 emotion-obj
-  mount:          31.46 ms
-  re-render:      21.86 ms
+  mount:          29.76 ms
+  re-render:      31.96 ms
 cxs-styled
-  mount:          40.08 ms
-  re-render:      40.55 ms
+  mount:          41.53 ms
+  re-render:      37.02 ms
 emotion-styled
-  mount:          49.40 ms
-  re-render:      40.81 ms
+  mount:          49.72 ms
+  re-render:      37.12 ms
 styled-components
-  mount:          59.15 ms
-  re-render:      51.56 ms
+  mount:          60.67 ms
+  re-render:      55.64 ms
 
-BUNDLE SIZES: (includes styles and framework, excludes React)
-cxs:                19.1 KB
-cxs-styled:         20.9 KB
-css:                24.7 KB
-emotion-css:        36.4 KB
-emotion-obj:        36.5 KB
-emotion-styled:     44.3 KB
-styled-components:  64.9 KB
+BUNDLE SIZES: (includes components, styles, and framework; excludes React)
+cxs:                9.3 KB
+cxs-styled:         11.1 KB
+css:                14.9 KB
+emotion-css:        26.6 KB
+emotion-obj:        26.7 KB
+emotion-styled:     34.5 KB
+styled-components:  55.1 KB
 ```
 
 ### Conclusions
