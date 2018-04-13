@@ -2,6 +2,9 @@ const http = require('http');
 const path = require('path');
 const fs = require('fs');
 
+const testData = require('./tests/data');
+const testJson = JSON.stringify(testData);
+
 const basePath = 'dist';
 
 const html = (name) => `
@@ -20,6 +23,9 @@ const html = (name) => `
     padding: 10px;
   }
   </style>
+  <script>
+  window.testData = ${testJson};
+  </script>
 </head>
 <body>
   <div id="root"></div>

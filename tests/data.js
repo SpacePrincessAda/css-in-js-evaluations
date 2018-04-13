@@ -1284,7 +1284,7 @@ const update = [
   }
 ];
 
-export default {
+module.exports = {
   initial,
   update,
 };

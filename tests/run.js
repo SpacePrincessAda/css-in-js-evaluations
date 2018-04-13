@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import testData from '../tests/data';
 
+const testData = window.testData;
 const noop = () => {};
 
 const options = [

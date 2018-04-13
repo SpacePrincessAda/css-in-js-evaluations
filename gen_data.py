@@ -45,7 +45,7 @@ const initial = {0};
 
 const update = {1};
 
-export default {{
+module.exports = {{
   initial,
   update,
 }};
