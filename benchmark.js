@@ -2,6 +2,7 @@ const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 const fs = require('fs');
 const path = require('path');
+const readline = require('readline');
 
 const NUMBER_OF_RUNS = 10;
 
@@ -47,6 +48,8 @@ async function test(name) {
   const stats = {};
   const order = new Set();
   for (let i=0; i<NUMBER_OF_RUNS; i++) {
+    readline.clearLine(process.stdout, 0);
+    process.stdout.write(`${name} run ${i+1} of ${NUMBER_OF_RUNS}\r`);
     const results = await run(`http://localhost:9090/page/${name}`, opts, config);
     const timings = results.audits['user-timings'].extendedInfo.value;
 
@@ -87,6 +90,7 @@ async function main() {
     const r = await test(name);
     results.push([name, r]);
   }
+  readline.clearLine(process.stdout, 0);
 
   const sortKey = 'mount';
   console.log(`RESULTS: (sorted by ${sortKey} time, average of ${NUMBER_OF_RUNS} runs)`);
